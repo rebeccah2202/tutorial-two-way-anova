@@ -1,4 +1,4 @@
-## ANOVA 2: Taking your ANOVA skills a step further. 
+![title](https://user-images.githubusercontent.com/114161047/205086292-f04f97fc-d836-4381-a5e5-af25a0f0900e.jpg)
 
 **Has someone told you that you need to run a two-way ANOVA on your data but you have no idea how to do it? Then you are in the right place. This tutorial is a step by step guide on understanding what a two-way anova is, how to conduct a two-way ANOVA, understand and interpret the output of a two-way ANOVA and how to visualise the data for a scientific report.**    
    
