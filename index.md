@@ -62,8 +62,7 @@ You are trying to answer the following **research question:**
 ### Does the effect of fertilizer on tomato yield depend on whether the tomato is grown in a field or in a greenhouse?   
 You have taken observations from 10 greenhouses and 10 fields. You measure tomato yield for a greenhouse by randomly selecting 5 plants and then averaging the yield per plant. This gives you 1 measurement of yield without fertilizer, 1 with organic fertilizer and 1 with synthetic fertilizer which overall gives you a sample size of 60. The yield per plant is then converted into ton/ha to give you are more meaningful value.   
 
-<img src="tomatoes.jpg" alt="drawing" width="500"/> 
-
+![tomatoes](https://user-images.githubusercontent.com/114161047/205049111-cd6c01fe-5ce3-4c0c-9f60-bb8072b1b6dd.jpg)
 *A photo I took of tomatoes I picked on an organic farm in La Puebla del Rio, in Andalusia (June 2022).*    
    
 Let’s summarise what variables we have in this tutorial:
@@ -166,10 +165,7 @@ ggsave(boxplot1, file = "figures/yield_boxplot.png", width = 9, height = 6)
    
 We can now see that the field measurements are coloured in red and the greenhouse measurements in blue. From the graph you should also be able to see that the yield is highest for synthetic fertilizer and lowest with no fertilizer. Overall, the yield tends to be higher in the greenhouse compared to the field. However, we see that the boxplots overlap and we cannot be sure that these differences are significant or if they could be due to chance. To check this, we can now compute a two-way ANOVA to see if the differences in yield are actually significant. 
    
-<img src="/figures/yield_boxplot.png" alt="drawing" width="700"/>
-
-
-
+![yield_boxplot](https://user-images.githubusercontent.com/114161047/205049226-2bf80dc4-4725-40d9-b084-256898da1e2b.png)
 
 
 <a name="section6"></a>
@@ -188,7 +184,7 @@ summary(model_1)
 ```
 
 We can now look at the output using the `summary()` function:
-<img src="/figures/model_1.png" alt="drawing" width="700"/>
+![model_1](https://user-images.githubusercontent.com/114161047/205049269-e44b5ade-3623-48c9-a962-6fd0a1bb981a.png)
 
 This is looking slightly more complicated than the output from a one-way ANOVA. Before we go through each line individually, let's remind ourselves of what each column represents.   
 `Df`: The degrees of freedom = the number of values that have the freedom to vary    
@@ -234,10 +230,10 @@ summary <- long %>% group_by(treatment, location) %>%
 ```
 
 *Model output*   
-<img src="/figures/lm_output.png" alt="drawing" width="1000"/>
+![lm_output](https://user-images.githubusercontent.com/114161047/205049320-8c7b16e5-0383-45eb-b088-55b745b37d6f.png)
 
 *Means of levels*   
-<img src="/figures/summary_data.png" alt="drawing" width="500"/>
+![summary_data](https://user-images.githubusercontent.com/114161047/205049356-53dba8e4-8475-43ce-ae80-1bc34c7fa28e.png)
 
 
 This output looks a lot more confusing than the output from the ANOVA. You may be thinking what is meant by intercept, why are some of my levels not in the ouput?? Feelings of confusion are completely normal. Outputs from interaction models can be quite daunting at first, but we will go through it step by step to make it clearer. 
@@ -306,7 +302,10 @@ plot_normal <- plot(model_1, which = 2)
 ```   
 From the histogram we can see that the residuals are normally distributed. The normal Q-Q plot also indicates whether the residuals are normally distirbuted or not. If the residuals are all on one line (indicated with the dotted line), then they are normally distributed. From the graph, we can see that most of the points are on the line.   
    
-<img src="/figures/histres.png" alt="drawing" width="500"/>    <img src="/figures/normalQQ.png" alt="drawing" width="500"/>
+![histres](https://user-images.githubusercontent.com/114161047/205049447-6c3d7e03-6f5b-46d5-a9ae-5c1481ba1bab.png)
+
+![normalQQ](https://user-images.githubusercontent.com/114161047/205049521-8b447263-75e6-4ae4-bf98-b869e4c30500.png)
+
 
 **3. The variances of the residuals in different groups are the same**     
 The next plot we are making is the residual vs fitted plot. This plot is used to assess whether we have equal variance. If the red line is flat then the variances of the residuals in different groups are the same. We can see that the red line is not perfectly flat which could be caused by the outliers points 20, 24 and 30. These outliers may affect the assumption of normality and equal variance. But you can only remove outliers if you have a **valid reason**. 
@@ -314,8 +313,7 @@ The next plot we are making is the residual vs fitted plot. This plot is used to
 # residuals vs fitted
 plot_res_vs_fit <- plot(model_1, which = 1)
 ```
-<img src="/figures/res_vs_fit.png" alt="drawing" width="600"/>
-
+![res_vs_fit](https://user-images.githubusercontent.com/114161047/205049554-32e4cc4f-fe8b-4ca2-b6c3-bd7b57695bfc.png)
 
 
 <a name="section8"></a>
@@ -326,7 +324,8 @@ You may still be thinking that you have not found out everything you wanted to k
 To identify this we can run a post-hoc test: Tukey test   
 This is a multiple pairwise-comparisons that compares all means and identifies which differences between means are significant. Personally, I think the best way to remember the name of this pairwise-comparison is by thinking of it as being very similar to the word turkey. But don't forget to remove the r when typing the code because unfortunately R  will not understand and you will get an error message. 
    
-<img src="/figures/turkey.jpg" alt="drawing"/> *Image of a turkey taken by Joel Sartore for The National Geographic*
+![turkey](https://user-images.githubusercontent.com/114161047/205049597-b90a141f-5282-4652-996c-baadc5b9446f.jpg)
+ *Image of a turkey taken by Joel Sartore for The National Geographic*
    
 Let's first look at which treatment types have significantly different means: Is there a significant effect in treatment between all levels? To run the Tukey test we use the function `TukeyHSD`.
 ```r
@@ -341,7 +340,7 @@ After running the code you should get the following output from the Tukey test. 
 (2) synthetic fertilizer vs no fertilizer   
 (3) synthetic fertilizer vs organic fertilizer   
    
-<img src="/figures/tukey_treat.png" alt="drawing" width="900"/>    
+![tukey_treat](https://user-images.githubusercontent.com/114161047/205049645-3aeda803-b5d0-48b0-8388-75d30ace98a9.png)
 The Tukey test gives us an adjusted p-value as indicated with `p adj` in the output. The p-value is adjusted to reflect that multiple comparisons are being made. If we don't use an adjusted p-value, then the probability of getting a type 1 error increases. From line 1 we can see that there is not a significant difference between adding no fertilizer and adding organic fertilizer to the tomato plants. This shows, that even though there is a significant difference of treatment type overall, the difference is not significant between all levels.
 
 Now let's have a look at which interactions are significant:
@@ -350,7 +349,7 @@ TukeyHSD(model_1, which = "treatment:location", conf.level=.95)
 ```
    
 When we run the Tukey test again, this time specifying the interaction using `treatment:location` we get the following output:   
-<img src="/figures/tukey_treat_loc.png" alt="drawing" width="900"/>   
+![tukey_treat_loc](https://user-images.githubusercontent.com/114161047/205049696-64c8aeb5-79ac-4d18-bb5c-84492d94d92d.png)
    
 HELP?? Why does the output have so many lines and numbers.     
 Take a deep breath, make a cup of tea and come back with a calmer mind.   
@@ -406,7 +405,7 @@ treatment and location, so the effect of treatment on tomato yield depends on th
 ggsave(boxplot2, file = "figures/yield_boxplot2.png", width = 9, height = 6)
 ```
 We can see that our second boxplot is much more suitable for a scientific report than the first one. 
-<img src="/figures/yield_boxplot2.png" alt="drawing" width="700"/>
+![yield_boxplot2](https://user-images.githubusercontent.com/114161047/205049766-364a3f00-e5cc-48de-91e1-f9a12cd8b53e.png)
 
 <a name="section10"></a>
 
