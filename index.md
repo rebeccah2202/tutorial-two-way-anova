@@ -17,15 +17,15 @@ After completing this tutorial you should be able to:
 #### <a href="#section1"> 1. Recap: What is an ANOVA and when do I use it?</a>
 #### <a href="#section2"> 2. The difference between a one-way and a two-way ANOVA</a>
 #### <a href="#section3"> 3. Context of this tutorial</a>
-#### <a href="#section4"> 4. Data wrangling</a>
- - set working directory
- - load data
- - load libraries 
- - explore and tidy dataset
+#### <a href="#section4"> 4. Data wrangling</a>   
+ set working directory   
+ load data   
+ load libraries    
+ explore and tidy dataset   
 #### <a href="#section5"> 5. Visualising data</a>
-#### <a href="#section6"> 6. Computing two-way ANOVA and understanding the output</a>
- - ANOVA using `aov`
- - ANOVA using `lm`
+#### <a href="#section6"> 6. Computing two-way ANOVA and understanding the output</a>    
+ ANOVA using `aov`   
+ ANOVA using `lm`   
 #### <a href="#section7"> 7. Checking assumptions</a>
 #### <a href="#section8"> 8. Tu(r)key test</a>
 #### <a href="#section9"> 9. How to report results</a>   
