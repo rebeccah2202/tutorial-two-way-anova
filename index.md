@@ -48,7 +48,7 @@ When we are using ANOVAs we are looking at the effect of one or more categorical
 If we look at the diagram below we see that when we have two-categorical explanatory variables, we have to conduct a two-way ANOVA. If we had more than two-categorical variables we would need a multi-factorial ANOVA. Now you might have just realized that your explanatory variable is not categorical but continuous. In that case you would need to use a linear regression.  I recommend you take a look at the coding club tutorial [from distributions to linear models](https://ourcodingclub.github.io/tutorials/modelling/).   
 
 **This diagram shows how to decide on the right model for your data:**   
-<img src="/figures/two_way_anova2.png" alt="drawing" width="1000"/>
+![two_way_anova2](https://user-images.githubusercontent.com/114161047/205048673-40d36f29-184d-4879-bb5c-a8f69ca26a8c.png)
 *credit: diagram from one-way ANOVA tutorial*
 
 
