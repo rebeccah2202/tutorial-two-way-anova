@@ -1,6 +1,6 @@
 # tutorial-two-way-anova
 
-This repository includes everything you need to complete this tutorial.      
+This repository includes everything you need to complete this tutorial. To get started with the **two-way ANOVA tutorial** click [here](https://rebeccah2202.github.io/tutorial-two-way-anova/).      
 Tutorial was designed by Rebecca Hies.    
 Contact: s2091339@ed.ac.uk   
 Last updated:    
