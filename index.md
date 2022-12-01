@@ -62,7 +62,7 @@ You are trying to answer the following **research question:**
 ### Does the effect of fertilizer on tomato yield depend on whether the tomato is grown in a field or in a greenhouse?   
 You have taken observations from 10 greenhouses and 10 fields. You measure tomato yield for a greenhouse by randomly selecting 5 plants and then averaging the yield per plant. This gives you 1 measurement of yield without fertilizer, 1 with organic fertilizer and 1 with synthetic fertilizer which overall gives you a sample size of 60. The yield per plant is then converted into ton/ha to give you are more meaningful value.   
 
-<img src="/figures/tomatoes.jpg" alt="drawing" width="500"/>   
+<img src="tomatoes.jpg" alt="drawing" width="500"/> 
 
 *A photo I took of tomatoes I picked on an organic farm in La Puebla del Rio, in Andalusia (June 2022).*    
    
