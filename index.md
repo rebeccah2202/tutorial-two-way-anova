@@ -86,7 +86,7 @@ These are my predicitons:
 
 <a name="section4"></a>
 ### 4. Data wrangling   
-To get started with R, you need to download the data for this tutorial from [this repository](https://github.com/EdDataScienceEES/tutorial-rebeccah2202). Click on `Code/Download Zip` and unzip the folder. The data you will need is the tomatoes.csv file.    
+To get started with R, you need to download the data for this tutorial from [this repository](https://github.com/EdDataScienceEES/tutorial-rebeccah2202)(https://github.com/rebeccah2202/tutorial-two-way-anova)). Click on `Code/Download Zip` and unzip the folder. The data you will need is the tomatoes.csv file.    
 Now open Rstudio and start a new script.   
    
  - set working directory   
